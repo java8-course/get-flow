@@ -1,26 +1,39 @@
 digraph tree {
     subgraph cluster_master {
         label="master"
-        A1 -> A2 -> A3 -> A4 -> A_merge_1
-        A_merge_1 -> A5
+        A1 -> A2 -> A3 -> A4 -> A4_B2_merge -> A5
         
-        br_master [shape=rectangle; label="master"]
+//         br_master [shape=rectangle; label="master"]
         
     //     br_master -> A1 [style=dashed]
     //     br_master -> A2 [style=dashed]
-        br_master -> A_merge_1
-        
-        {rank=same; A_merge_1; br_master}
+//         br_master -> A5
+//         
+//         {rank=same; A5; br_master}
     }
     
     subgraph cluster_branching {
         label="branching"
         B1 -> B2
-        br_branching [shape=rectangle; label="branching"]
-        {rank=same; B2; br_branching}
+//         br_branching [shape=rectangle; label="branching"]
+//         br_branching -> B2
+//         {rank=same; B2; br_branching}
     }
     
     A3 -> B1
-    B2 -> A_merge_1
-    br_branching -> B1
+    B2 -> A4_B2_merge
+    
+    subgraph cluster_rebase {
+        C1
+    }
+    
+    A4_B2_merge -> C1
 }
+
+
+
+
+
+
+
+
