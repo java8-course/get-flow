@@ -2,6 +2,7 @@ digraph tree {
     subgraph cluster_master {
         label="master"
         A1 -> A2 -> A3 -> A4 -> A_merge_1
+        A_merge_1 -> A5
         
         br_master [shape=rectangle; label="master"]
         
