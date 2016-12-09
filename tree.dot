@@ -25,10 +25,16 @@ digraph tree {
     
     subgraph cluster_rebase {
         label="rebase"
+        C1 [style=dashed]
+        C2 [style=dashed]
         C1 -> C2
+        C1_new [label="C1"]
+        C2_new [label="C2"]
+        C1_new -> C2_new -> C3
     }
     
     A4_B2_merge -> C1
+    A5 -> C1_new
 }
 
 
