@@ -24,7 +24,8 @@ digraph tree {
     B2 -> A4_B2_merge
     
     subgraph cluster_rebase {
-        C1
+        label="rebase"
+        C1 -> C2
     }
     
     A4_B2_merge -> C1
