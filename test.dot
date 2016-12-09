@@ -1,0 +1,37 @@
+digraph example {
+  subgraph {
+    rankdir = "LR"
+    subgraph clusterfeature1 {
+      rankdir = "TB"
+      label = "feature1";
+      c1 -> c2;
+    }
+
+    br_feature1 [shape=rectangle];
+
+    br_feature1 -> c2;
+  }
+
+  subgraph {
+    rankdir = "LR"
+    subgraph clustermaster {
+      rankdir = "TB"
+      node [style=filled,color=white];
+      style=filled;
+      color=lightgrey;
+      a1 -> a2 -> a3 -> a4 -> a5;
+      label = "master";
+    }
+
+    br_master [shape=rectangle];
+
+    br_master -> a5;
+  }
+
+  a2 -> c1;
+  c2 -> a5;
+
+
+
+
+}
