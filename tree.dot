@@ -6,6 +6,7 @@ digraph tree {
         C1_new [label="C1"]
         C2_new [label="C2"]
         C1_new -> C2_new -> C3
+	C3->D2_C3_merge
         
 //         br_master [shape=rectangle; label="master"]
         
@@ -41,10 +42,10 @@ digraph tree {
     
     subgraph cluster_branching2 {
         label="branching2"
-        D1 -> D2 -> D2_C3_merge
+        D1 -> D2
     }
     
-    A4 -> D1
+    D2 -> D2_C3_merge
     C3 -> D2_C3_merge
 }
 
