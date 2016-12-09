@@ -14,8 +14,11 @@ digraph tree {
     
     subgraph cluster_branching {
         label="branching"
+        B1 -> B2
         br_branching [shape=rectangle; label="branching"]
+        {rank=same; B2; br_branching}
     }
     
-    br_branching -> A3
+    A3 -> B1
+    br_branching -> B1
 }
