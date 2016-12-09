@@ -6,6 +6,8 @@ digraph tree {
         C1_new [label="C1"]
         C2_new [label="C2"]
         C1_new -> C2_new -> C3
+		
+		C3-D2_C3-merge
         
 //         br_master [shape=rectangle; label="master"]
         
@@ -44,6 +46,7 @@ digraph tree {
         D1 -> D2 -> D2_C3_merge
     }
     
+	D2 -> D2_C3_merge
     A4 -> D1
     C3 -> D2_C3_merge
 }
